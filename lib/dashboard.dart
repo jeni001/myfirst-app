@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:myfirst_app/leavepg.dart';
 import 'package:myfirst_app/main.dart';
+import 'package:myfirst_app/comman.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({super.key});
@@ -32,6 +33,8 @@ class _DashBoardState extends State<DashBoard> {
           ListTile(
             title: const Text('Home'),
             onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DashBoard()));
               // Update the state of the app.
               // ...
             },
@@ -39,6 +42,8 @@ class _DashBoardState extends State<DashBoard> {
           ListTile(
             title: const Text('Apply for Leave'),
             onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => LeavePg()));
               // Update the state of the app.
               // ...
             },
@@ -46,6 +51,7 @@ class _DashBoardState extends State<DashBoard> {
           ListTile(
             title: const Text('Logout'),
             onTap: () {
+              showLoAlert(context);
               // Update the state of the app.
               // ...
             },
@@ -70,8 +76,7 @@ class _DashBoardState extends State<DashBoard> {
               child: ElevatedButton(
                 child: const Text('Logout'),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApp()));
+                  showLoAlert(context);
                 },
               ),
             ),

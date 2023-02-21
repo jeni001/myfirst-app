@@ -49,6 +49,9 @@ class _SignupState extends State<Signup> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'User Email',
+                      suffix: Icon(
+                        (Icons.mail),
+                      ),
                     ),
                   ),
                 ),
