@@ -174,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Checkbox(
-                      checkColor: Colors.blue,
+                      checkColor: Colors.white,
                       value: isChecked,
                       onChanged: (bool? value) {
                         setState(() {
